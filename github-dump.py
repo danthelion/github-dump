@@ -57,7 +57,7 @@ def _clone_repo_cmd(repo_url: str, dump_folder: Path) -> str:
     :param dump_folder: Target folder to clone into.
     :return: Formatted string ready to be run as a subprocess.
     """
-    return f'git clone {repo_url} {dump_folder}'
+    return f'git clone --mirror {repo_url} {dump_folder}'
 
 
 def clone_repos(repos: List[Tuple[str, str]], dump_folder: Path) -> List[int]:
